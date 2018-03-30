@@ -8,6 +8,7 @@ public class SplashScreen : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        DontDestroyOnLoad(this);
         Invoke("GoPlayScene", 3f);
 	}
 	
