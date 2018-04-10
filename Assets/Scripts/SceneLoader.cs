@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SplashScreen : MonoBehaviour {
+public class SceneLoader : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()
     {
-        DontDestroyOnLoad(this);
-        Invoke("GoPlayScene", 3f);
+        Invoke("GoPlayScene", 2f);
 	}
 	
 	// Update is called once per frame
