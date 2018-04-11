@@ -15,12 +15,6 @@ public class Player : MonoBehaviour
     [SerializeField] float positionYawFactor = 5f;
     [SerializeField] float controlRollFactor = -30f;
     float xThrow, yThrow;
-
-    // Use this for initialization
-    void Start ()
-    {
-
-    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -51,4 +45,6 @@ public class Player : MonoBehaviour
 
         transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
     }
+
+   
 }
