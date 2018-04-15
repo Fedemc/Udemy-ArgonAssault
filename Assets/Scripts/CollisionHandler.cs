@@ -1,8 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour {
+
+    [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] GameObject deathFX;
 
 	// Use this for initialization
 	void Start ()
@@ -18,6 +23,20 @@ public class CollisionHandler : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player hit something as trigger! Triggered with: " + other.gameObject.name);
+        StartDeathSequence();
+    }
+
+    private void StartDeathSequence()
+    {
+        print("Player dying...");
+        SendMessage("OnPlayerDeath");
+        deathFX.SetActive(true);
+        Invoke("ReloadLevel", levelLoadDelay);
+        //TO DO Desprender pedazos de nave
+    }
+
+    private void ReloadLevel()
+    {
+        SceneManager.LoadScene(1);
     }
 }

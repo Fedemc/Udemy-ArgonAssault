@@ -5,22 +5,31 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In meters per second")][SerializeField] float acceleration=4f;
+    [Header("General")]
+    [Tooltip("In meters per second")][SerializeField] float controlSpeed=4f;
     [SerializeField] float xLimit = 5.5f;
     [SerializeField] float yLimit = 3.5f;
+
+    [Header("Screen-position based")]
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float positionYawFactor = 5f;
+    [Header("Control-throw based")]
+    [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
     float xThrow, yThrow;
+    bool isControlEnabled = true;
 	
 	// Update is called once per frame
 	void Update ()
     {
-        ManageTranslation();
-        ManageRotation();
+        if(isControlEnabled)
+        {
+            ManageTranslation();
+            ManageRotation();
+        }
+        
     }
 
     private void ManageRotation()
@@ -34,16 +43,21 @@ public class Player : MonoBehaviour
     private void ManageTranslation()
     {
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffset = xThrow * acceleration * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
         float rawNewXPos = transform.localPosition.x + xOffset;
         float newXPos = Mathf.Clamp(rawNewXPos, -xLimit, xLimit);
 
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
-        float yOffset = yThrow * acceleration * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
         float rawNewYPos = transform.localPosition.y + yOffset;
         float newYPos = Mathf.Clamp(rawNewYPos, -yLimit, yLimit);
 
         transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
+    }
+
+    private void OnPlayerDeath()    //called by string reference from CollisionHandler.cs
+    {
+        isControlEnabled = false;
     }
 
    

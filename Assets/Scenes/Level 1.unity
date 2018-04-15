@@ -1226,22 +1226,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1760608365 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1021536006130448, guid: f0c08d0fa7174594380b02560e0fc584,
-    type: 2}
-  m_PrefabInternal: {fileID: 2106214803}
---- !u!114 &1760608366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1760608365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc125ec9685344749a2cb110f694560c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1831053514
 Prefab:
   m_ObjectHideFlags: 0
@@ -1499,21 +1483,6 @@ Prefab:
     - target: {fileID: 4139454214007428, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54044451909861648, guid: f0c08d0fa7174594380b02560e0fc584,
-        type: 2}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65597375424206274, guid: f0c08d0fa7174594380b02560e0fc584,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114616716107462600, guid: f0c08d0fa7174594380b02560e0fc584,
-        type: 2}
-      propertyPath: acceleration
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}
