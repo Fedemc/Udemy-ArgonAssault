@@ -8,7 +8,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
     [Header("General")]
-    [Tooltip("In meters per second")][SerializeField] float controlSpeed=4f;
+    [Tooltip("In meters per second")] [SerializeField] float controlSpeed = 4f;
     [SerializeField] float xLimit = 5.5f;
     [SerializeField] float yLimit = 3.5f;
 
@@ -20,21 +20,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlRollFactor = -30f;
     float xThrow, yThrow;
     bool isControlEnabled = true;
-	
-	// Update is called once per frame
-	void Update ()
+
+    [SerializeField] float explosionForce = 8f;
+
+    // Update is called once per frame
+    void Update()
     {
-        if(isControlEnabled)
+        if (isControlEnabled)
         {
             ManageTranslation();
             ManageRotation();
         }
-        
+
     }
 
     private void ManageRotation()
     {
-        float pitch= transform.localPosition.y * positionPitchFactor + yThrow*controlPitchFactor;
+        float pitch = transform.localPosition.y * positionPitchFactor + yThrow * controlPitchFactor;
         float yaw = transform.localPosition.x * positionYawFactor;
         float roll = xThrow * controlRollFactor;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
@@ -58,7 +60,15 @@ public class PlayerController : MonoBehaviour
     private void OnPlayerDeath()    //called by string reference from CollisionHandler.cs
     {
         isControlEnabled = false;
+        BlowInPieces(); //Se puede remover
     }
 
-   
+    private void BlowInPieces()
+    {        
+        foreach (Transform child in GameObject.Find("Body").GetComponent<Transform>().GetComponentInChildren<Transform>())
+        {
+            child.gameObject.AddComponent<Rigidbody>();
+            child.gameObject.GetComponent<Rigidbody>().AddForce(UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), ForceMode.Impulse);
+        }
+    }   
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour {
 
-    [SerializeField] float levelLoadDelay = 1f;
+    [SerializeField] float levelLoadDelay = 2f;
     [SerializeField] GameObject deathFX;
 
 	// Use this for initialization
@@ -30,9 +30,10 @@ public class CollisionHandler : MonoBehaviour {
     {
         print("Player dying...");
         SendMessage("OnPlayerDeath");
+        //TO DO Desprender pedazos de nave
         deathFX.SetActive(true);
         Invoke("ReloadLevel", levelLoadDelay);
-        //TO DO Desprender pedazos de nave
+        
     }
 
     private void ReloadLevel()
