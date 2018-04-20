@@ -1950,6 +1950,11 @@ Prefab:
       propertyPath: explosionForce
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 33690815066934554, guid: f0c08d0fa7174594380b02560e0fc584,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300038, guid: 6f6b397918ef75c499a826247372b18c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}
   m_IsPrefabParent: 0

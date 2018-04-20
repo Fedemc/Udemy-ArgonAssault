@@ -64,11 +64,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void BlowInPieces()
-    {        
-        foreach (Transform child in GameObject.Find("Body").GetComponent<Transform>().GetComponentInChildren<Transform>())
+    {
+        GameObject shipBody = GameObject.Find("Body");
+        foreach (Transform child in shipBody.GetComponentInChildren<Transform>())
         {
+            Vector3 pushVector = new Vector3(UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce));
             child.gameObject.AddComponent<Rigidbody>();
-            child.gameObject.GetComponent<Rigidbody>().AddForce(UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), ForceMode.Impulse);
+            //child.gameObject.GetComponent<Rigidbody>().AddForce(pushVector, ForceMode.Impulse);
+            child.gameObject.GetComponent<Rigidbody>().velocity = pushVector;
         }
     }   
 }
