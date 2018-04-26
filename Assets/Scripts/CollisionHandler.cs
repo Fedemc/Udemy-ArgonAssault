@@ -30,7 +30,6 @@ public class CollisionHandler : MonoBehaviour {
     {
         print("Player dying...");
         SendMessage("OnPlayerDeath");
-        //TO DO Desprender pedazos de nave
         deathFX.SetActive(true);
         Invoke("ReloadLevel", levelLoadDelay);
         
