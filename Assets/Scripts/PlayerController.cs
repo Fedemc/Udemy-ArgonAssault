@@ -71,7 +71,8 @@ public class PlayerController : MonoBehaviour
             Vector3 pushVector = new Vector3(UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce));
             child.gameObject.AddComponent<Rigidbody>();
             child.gameObject.GetComponent<Rigidbody>().velocity = pushVector;
-            //TO DO: Hacer que roten las partes
+            child.gameObject.GetComponent<Rigidbody>().AddTorque(pushVector,ForceMode.Impulse);
+            
         }
     }   
 }

@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!1 &38080587
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 25
 --- !u!4 &218711747 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4139454214007428, guid: f0c08d0fa7174594380b02560e0fc584,
@@ -660,6 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!1001 &460103998
 Prefab:
   m_ObjectHideFlags: 0
@@ -846,6 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 25
 --- !u!4 &586498877 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4601753576017446, guid: 61a6d91a61f111c40b66a8ebdb85f6bf,
@@ -869,6 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!1 &705465031
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!65 &731330985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1345,6 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!65 &1154523792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1516,6 +1523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!4 &1318981209 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4172564791290778, guid: 9cffec82e7c22dd4ab5dc16ddec0e638,
@@ -1793,6 +1801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 25
 --- !u!1 &1698885453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,7 +1855,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713351743}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1713351745
 Behaviour:
   m_ObjectHideFlags: 0
@@ -2000,6 +2009,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198864780516948646, guid: f0c08d0fa7174594380b02560e0fc584,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198150457997182000, guid: f0c08d0fa7174594380b02560e0fc584,
+        type: 2}
+      propertyPath: randomSeed
+      value: -893945507
+      objectReference: {fileID: 0}
+    - target: {fileID: 198150457997182000, guid: f0c08d0fa7174594380b02560e0fc584,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198864780516948646, guid: f0c08d0fa7174594380b02560e0fc584,
+        type: 2}
+      propertyPath: randomSeed
+      value: 1512884408
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}
   m_IsPrefabParent: 0
@@ -2100,6 +2129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
+  scorePerHit: 50
 --- !u!65 &1918294842
 BoxCollider:
   m_ObjectHideFlags: 0
