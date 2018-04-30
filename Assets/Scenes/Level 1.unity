@@ -2009,25 +2009,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198864780516948646, guid: f0c08d0fa7174594380b02560e0fc584,
-        type: 2}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
+    - target: {fileID: 1514913574482166, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198150457997182000, guid: f0c08d0fa7174594380b02560e0fc584,
-        type: 2}
-      propertyPath: randomSeed
-      value: -893945507
-      objectReference: {fileID: 0}
-    - target: {fileID: 198150457997182000, guid: f0c08d0fa7174594380b02560e0fc584,
-        type: 2}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
+    - target: {fileID: 1349916115939708, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198864780516948646, guid: f0c08d0fa7174594380b02560e0fc584,
         type: 2}
-      propertyPath: randomSeed
-      value: 1512884408
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 198150457997182000, guid: f0c08d0fa7174594380b02560e0fc584,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0c08d0fa7174594380b02560e0fc584, type: 2}

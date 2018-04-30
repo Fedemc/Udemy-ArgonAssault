@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [Header("Control-throw based")]
     [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
+    [SerializeField] GameObject[] lasers;
+
     float xThrow, yThrow;
     bool isControlEnabled = true;
 
@@ -30,9 +32,12 @@ public class PlayerController : MonoBehaviour
         {
             ManageTranslation();
             ManageRotation();
+            ManageFiring();
         }
 
     }
+
+    
 
     private void ManageRotation()
     {
@@ -57,9 +62,38 @@ public class PlayerController : MonoBehaviour
         transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
     }
 
+    private void ManageFiring()
+    {
+        if(CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateLasers();
+        }
+        else
+        {
+            DeactivateLasers();
+        }
+    }
+
+    private void DeactivateLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(false);
+        }
+    }
+
+    private void ActivateLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(true);
+        }
+    }
+
     private void OnPlayerDeath()    //called by string reference from CollisionHandler.cs
     {
         isControlEnabled = false;
+        DeactivateLasers();
         BlowInPieces(); //Se puede remover
     }
 

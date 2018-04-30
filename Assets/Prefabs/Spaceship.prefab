@@ -2063,6 +2063,9 @@ MonoBehaviour:
   positionYawFactor: 6.5
   controlPitchFactor: -20
   controlRollFactor: -20
+  lasers:
+  - {fileID: 1514913574482166}
+  - {fileID: 1349916115939708}
   explosionForce: 15
 --- !u!114 &114655372397980992
 MonoBehaviour:
@@ -2137,7 +2140,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2096872294
+  randomSeed: -893945507
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2697,7 +2700,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -8859,7 +8862,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2069491004
+  randomSeed: 1512884408
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9419,7 +9422,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
