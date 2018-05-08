@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour {
         ProcessHit();
         if (maxHits <= 0)
         {
+            scoreBoard.ScoreHit(scorePerHit);
             KillEnemy();
         }
     }
@@ -44,7 +45,6 @@ public class Enemy : MonoBehaviour {
     {
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
-        scoreBoard.ScoreHit(scorePerHit);
         maxHits--;
     }
 

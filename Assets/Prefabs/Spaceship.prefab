@@ -2333,8 +2333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlSpeed: 10
-  xLimit: 6.5
-  yLimit: 4
+  xLimit: 5.8
+  yLimit: 3.8
   positionPitchFactor: -5
   positionYawFactor: 6.5
   controlPitchFactor: -20

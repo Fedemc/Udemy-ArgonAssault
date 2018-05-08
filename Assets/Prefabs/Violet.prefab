@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33628780353519238}
   - component: {fileID: 23542366424370412}
   m_Layer: 0
-  m_Name: Ship_05
+  m_Name: Violet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
