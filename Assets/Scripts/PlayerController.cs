@@ -20,12 +20,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlRollFactor = -30f;
     [SerializeField] GameObject[] lasers;
 
+    BlowInPieces blowInPiecesActivator;
+
+
     float xThrow, yThrow;
     bool isControlEnabled = true;
 
-    [SerializeField] float explosionForce = 8f;
+    
 
-    // Update is called once per frame
+    private void Start()
+    {
+        blowInPiecesActivator = gameObject.GetComponent<BlowInPieces>();
+    }
     void Update()
     {
         if (isControlEnabled)
@@ -94,19 +100,6 @@ public class PlayerController : MonoBehaviour
     {
         isControlEnabled = false;
         DeactivateLasers();
-        BlowInPieces(); //Se puede remover
-    }
-
-    private void BlowInPieces()
-    {
-        GameObject shipBody = GameObject.Find("Body");
-        foreach (Transform child in shipBody.GetComponentInChildren<Transform>())
-        {
-            Vector3 pushVector = new Vector3(UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce), UnityEngine.Random.Range(-explosionForce, explosionForce));
-            child.gameObject.AddComponent<Rigidbody>();
-            child.gameObject.GetComponent<Rigidbody>().velocity = pushVector;
-            child.gameObject.GetComponent<Rigidbody>().AddTorque(pushVector,ForceMode.Impulse);
-            
-        }
-    }   
+        blowInPiecesActivator.Explode();
+    }    
 }

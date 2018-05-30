@@ -31,7 +31,6 @@ public class CollisionHandler : MonoBehaviour {
     {
         print("Player dying...");
         SendMessage("OnPlayerDeath");
-        //Quitar trailrenderers de contrails
         foreach(GameObject element in thrusters)    //TODO sacar esto de aca
         {
             element.SetActive(false);
