@@ -72,34 +72,28 @@ public class PlayerController : MonoBehaviour
     {
         if(CrossPlatformInputManager.GetButton("Fire"))
         {
-            ActivateLasers();
+            SetLasersActive(true);
         }
         else
         {
-            DeactivateLasers();
+            SetLasersActive(false);
         }
     }
 
-    private void DeactivateLasers()
+    private void SetLasersActive(bool isActive)
     {
-        foreach (GameObject laser in lasers)
-        {
-            laser.SetActive(false);
-        }
-    }
 
-    private void ActivateLasers()
-    {
         foreach (GameObject laser in lasers)
         {
-            laser.SetActive(true);
+            var emissionModule=laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 
     private void OnPlayerDeath()    //called by string reference from CollisionHandler.cs
     {
         isControlEnabled = false;
-        DeactivateLasers();
+        SetLasersActive(false);
         blowInPiecesActivator.Explode();
     }    
 }
