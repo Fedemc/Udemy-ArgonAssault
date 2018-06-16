@@ -1272,18 +1272,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &433426746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 433426744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ae04f322e7a8d4d8d990d32882761b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionForce: 15
 --- !u!1 &469374275
 GameObject:
   m_ObjectHideFlags: 0
@@ -6807,7 +6795,7 @@ MonoBehaviour:
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
   scorePerHit: 50
-  maxHits: 5
+  maxHits: 3
 --- !u!1001 &773337392
 Prefab:
   m_ObjectHideFlags: 0
@@ -18010,7 +17998,7 @@ MonoBehaviour:
   deathFX: {fileID: 1208407435650690, guid: 1634b2ea6f6f44046a80c1c022b8848c, type: 2}
   parent: {fileID: 827056958}
   scorePerHit: 50
-  maxHits: 5
+  maxHits: 3
 --- !u!1 &1507172595
 GameObject:
   m_ObjectHideFlags: 0
@@ -22066,7 +22054,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 0
+    minKillSpeed: 10000
     maxKillSpeed: 10000
     radiusScale: 1
     collidesWith:
@@ -27009,7 +26997,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 0
+    minKillSpeed: 10000
     maxKillSpeed: 10000
     radiusScale: 1
     collidesWith:
@@ -28434,18 +28422,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1803378522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1803378520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11ae04f322e7a8d4d8d990d32882761b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionForce: 15
 --- !u!1001 &1809060750
 Prefab:
   m_ObjectHideFlags: 0
