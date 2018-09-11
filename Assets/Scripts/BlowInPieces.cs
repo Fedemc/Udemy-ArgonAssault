@@ -29,5 +29,4 @@ public class BlowInPieces : MonoBehaviour {
             child.gameObject.GetComponent<Rigidbody>().AddTorque(pushVector, ForceMode.Impulse);
         }
     }
-    
 }

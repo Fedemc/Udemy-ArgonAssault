@@ -24,7 +24,11 @@ public class CollisionHandler : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        StartDeathSequence();
+        if(other.gameObject.tag !="Player")
+        {
+            StartDeathSequence();
+        }
+        
     }
 
     private void StartDeathSequence()

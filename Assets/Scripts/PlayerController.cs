@@ -19,8 +19,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
     [SerializeField] GameObject[] lasers;
-
+    [SerializeField] GameObject beam;
+    [SerializeField] GameObject beamSpawner;
+    [SerializeField] GameObject crosshair;
+    [SerializeField] float beamForce = 10f;
     BlowInPieces blowInPiecesActivator;
+
 
 
     float xThrow, yThrow;
@@ -28,10 +32,11 @@ public class PlayerController : MonoBehaviour
 
     
 
-    private void Start()
+    void Start()
     {
         blowInPiecesActivator = gameObject.GetComponent<BlowInPieces>();
     }
+
     void Update()
     {
         if (isControlEnabled)
@@ -40,6 +45,7 @@ public class PlayerController : MonoBehaviour
             ManageRotation();
             ManageFiring();
         }
+        
 
     }
 
@@ -70,9 +76,19 @@ public class PlayerController : MonoBehaviour
 
     private void ManageFiring()
     {
-        if(CrossPlatformInputManager.GetButton("Fire"))
+        if (CrossPlatformInputManager.GetButton("Fire"))
         {
             SetLasersActive(true);
+
+            /*
+            GameObject b = Instantiate(beam, beamSpawner.transform.position, Quaternion.identity);
+            b.transform.Rotate(0,-90, 0, Space.Self);
+            Rigidbody rb = b.GetComponent<Rigidbody>();
+
+            var beamSpeed = gameObject.GetComponent<Rigidbody>().velocity;
+            rb.velocity = transform.TransformDirection(new Vector3(0, 0, beamForce));
+            //rb.AddForce(Vector3.forward * beamForce, ForceMode.Impulse);
+            */
         }
         else
         {
@@ -85,9 +101,10 @@ public class PlayerController : MonoBehaviour
 
         foreach (GameObject laser in lasers)
         {
-            var emissionModule=laser.GetComponent<ParticleSystem>().emission;
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
             emissionModule.enabled = isActive;
         }
+        
     }
 
     private void OnPlayerDeath()    //called by string reference from CollisionHandler.cs
