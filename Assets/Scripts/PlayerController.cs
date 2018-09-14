@@ -19,22 +19,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
     [SerializeField] GameObject[] lasers;
-    [SerializeField] GameObject beam;
-    [SerializeField] GameObject beamSpawner;
+    [SerializeField] BeamHandler beam;
+    [SerializeField] GameObject[] beamSpawner;
     [SerializeField] GameObject crosshair;
-    [SerializeField] float beamForce = 10f;
-    BlowInPieces blowInPiecesActivator;
-
+    private float timeToFire=0;
+    private BlowInPieces blowInPiecesActivator;
+    private Vector3 prevPos;
+    private float currentSpeed;
 
 
     float xThrow, yThrow;
     bool isControlEnabled = true;
 
-    
+
 
     void Start()
     {
         blowInPiecesActivator = gameObject.GetComponent<BlowInPieces>();
+        prevPos = transform.position;
     }
 
     void Update()
@@ -45,11 +47,22 @@ public class PlayerController : MonoBehaviour
             ManageRotation();
             ManageFiring();
         }
-        
 
+        Vector3 currentPos = transform.position;
+        currentSpeed = getDistance(currentPos, prevPos)/Time.deltaTime;
+        //Debug.Log(currentSpeed.ToString());
+        prevPos = transform.position;
     }
 
-    
+    private float getDistance(Vector3 currentPos, Vector3 prevPos)
+    {
+        return Vector3.Distance(currentPos, prevPos);
+    }
+
+    public float GetCurrentSpeed()
+    {
+        return currentSpeed;
+    }
 
     private void ManageRotation()
     {
@@ -76,19 +89,16 @@ public class PlayerController : MonoBehaviour
 
     private void ManageFiring()
     {
-        if (CrossPlatformInputManager.GetButton("Fire"))
+        if (CrossPlatformInputManager.GetButton("Fire") && (Time.time >= timeToFire))
         {
             SetLasersActive(true);
-
-            /*
-            GameObject b = Instantiate(beam, beamSpawner.transform.position, Quaternion.identity);
-            b.transform.Rotate(0,-90, 0, Space.Self);
-            Rigidbody rb = b.GetComponent<Rigidbody>();
-
-            var beamSpeed = gameObject.GetComponent<Rigidbody>().velocity;
-            rb.velocity = transform.TransformDirection(new Vector3(0, 0, beamForce));
-            //rb.AddForce(Vector3.forward * beamForce, ForceMode.Impulse);
-            */
+            foreach(GameObject bSp in beamSpawner)
+            {
+                BeamHandler b = Instantiate(beam, bSp.transform.position, Quaternion.identity);
+                b.transform.LookAt(crosshair.transform);
+                timeToFire = Time.time + 1 / b.fireRate;
+                b.ship = this;
+            }                  
         }
         else
         {

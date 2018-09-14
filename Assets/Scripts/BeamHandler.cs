@@ -4,25 +4,35 @@ using UnityEngine;
 
 public class BeamHandler : MonoBehaviour {
 
-    [SerializeField] float beamSpeed = 1f;
-    [SerializeField] float delayTime=8;
-    private float counter=0;
+    [SerializeField] float beamSpeed = 5f;
+    [SerializeField] float beamTimeAlive = 3f;
 
-	// Use this for initialization
-	void Start ()
+    public float fireRate=5;
+    public PlayerController ship;
+
+
+    void Start ()
     {
-        transform.Rotate(90, 0, 0);
+        Destroy(gameObject, beamTimeAlive);
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+
+    void Update ()
     {
-        //transform.Translate(0, 0, beamSpeed);
-        
+        //Debug.Log(ship.GetCurrentSpeed());
+        transform.position += transform.forward * (beamSpeed * Time.deltaTime) * ship.GetCurrentSpeed(); 
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
+        beamSpeed = 0;
         Destroy(gameObject);
+    }
+
+
+
+    public void SetRotation()
+    {
+
     }
 }

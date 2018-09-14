@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 65160802}
   - component: {fileID: 65160804}
   - component: {fileID: 65160803}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing_Left (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 82120996}
   - component: {fileID: 82120998}
   - component: {fileID: 82120997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon_Left (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 95305615}
   - component: {fileID: 95305617}
   - component: {fileID: 95305616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing_Left (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 112719442}
   - component: {fileID: 112719444}
   - component: {fileID: 112719443}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster_End (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 180001596}
   - component: {fileID: 180001598}
   - component: {fileID: 180001597}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing_Right (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -907,7 +907,7 @@ GameObject:
   - component: {fileID: 189023062}
   - component: {fileID: 189023064}
   - component: {fileID: 189023063}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon_Left (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1092,8 +1092,9 @@ Transform:
   - {fileID: 1408843381}
   - {fileID: 908661045}
   - {fileID: 1059853595}
-  - {fileID: 760859457}
   - {fileID: 275474751}
+  - {fileID: 760859457}
+  - {fileID: 509546629}
   m_Father: {fileID: 1713351747}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1108,7 +1109,7 @@ GameObject:
   - component: {fileID: 268978560}
   - component: {fileID: 268978562}
   - component: {fileID: 268978561}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,11 +1182,11 @@ Transform:
   m_PrefabInternal: {fileID: 414269059}
   m_GameObject: {fileID: 1021481936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 38.28}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children: []
   m_Father: {fileID: 218711747}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &414269059
 Prefab:
@@ -1204,7 +1205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4258559451313150, guid: d833bfe6fd8e5b54faf07e49ebe0dbdf, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 15
+      value: 38.28
       objectReference: {fileID: 0}
     - target: {fileID: 4258559451313150, guid: d833bfe6fd8e5b54faf07e49ebe0dbdf, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1237,6 +1238,10 @@ Prefab:
     - target: {fileID: 4258559451313150, guid: d833bfe6fd8e5b54faf07e49ebe0dbdf, type: 2}
       propertyPath: m_LocalScale.z
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1585272482218470, guid: d833bfe6fd8e5b54faf07e49ebe0dbdf, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d833bfe6fd8e5b54faf07e49ebe0dbdf, type: 2}
@@ -1355,7 +1360,7 @@ GameObject:
   - component: {fileID: 469374276}
   - component: {fileID: 469374278}
   - component: {fileID: 469374277}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Engine (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1498,7 @@ GameObject:
   - component: {fileID: 493191642}
   - component: {fileID: 493191644}
   - component: {fileID: 493191643}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,7 +1574,7 @@ GameObject:
   - component: {fileID: 507410620}
   - component: {fileID: 507410622}
   - component: {fileID: 507410621}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon_Right (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,6 +1639,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507410619}
   m_Mesh: {fileID: 4300034, guid: 6f6b397918ef75c499a826247372b18c, type: 3}
+--- !u!1 &509546628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509546629}
+  m_Layer: 9
+  m_Name: BeamSpawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &509546629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509546628}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.254, y: 0.3630017, z: 0.30799913}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 218711747}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &581235573
 Prefab:
   m_ObjectHideFlags: 0
@@ -1724,7 +1757,7 @@ GameObject:
   - component: {fileID: 582874871}
   - component: {fileID: 582874873}
   - component: {fileID: 582874872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineParticles3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6346,7 +6379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 588011178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightDownThruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6381,7 +6414,7 @@ GameObject:
   - component: {fileID: 613551876}
   - component: {fileID: 613551878}
   - component: {fileID: 613551877}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Secondary_wing_Left (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6879,8 +6912,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760859457}
-  m_Layer: 0
-  m_Name: BeamSpawner
+  m_Layer: 9
+  m_Name: BeamSpawner1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6893,11 +6926,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 760859456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.279, y: 0.363, z: 0.235}
+  m_LocalPosition: {x: -1.249, y: 0.363, z: 0.308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 218711747}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &773337392
 Prefab:
@@ -6968,7 +7001,7 @@ GameObject:
   - component: {fileID: 786851058}
   - component: {fileID: 786851060}
   - component: {fileID: 786851059}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineParticles2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11743,7 +11776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 880185188}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftUpThruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11778,7 +11811,7 @@ GameObject:
   - component: {fileID: 881997772}
   - component: {fileID: 881997774}
   - component: {fileID: 881997773}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster_End (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11852,7 +11885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 908661045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipVisuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11990,6 +12023,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1396987487068946, guid: 7b01649aa00efcc489eb0bccf5eba89f, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b01649aa00efcc489eb0bccf5eba89f, type: 2}
   m_IsPrefabAsset: 0
@@ -12073,7 +12110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 980477351}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12114,7 +12151,7 @@ GameObject:
   - component: {fileID: 1019756117}
   - component: {fileID: 1019756119}
   - component: {fileID: 1019756118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster_End (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12189,7 +12226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275474751}
   - component: {fileID: 1021481937}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrosshairSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12476,7 +12513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059853595}
   - component: {fileID: 1059853596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CrosshairLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12490,7 +12527,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1059853594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 33.28}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 218711747}
@@ -12551,7 +12588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085590419}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightUpThruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12655,7 +12692,7 @@ GameObject:
   - component: {fileID: 1169162910}
   - component: {fileID: 1169162912}
   - component: {fileID: 1169162911}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Secondary_wing_Right (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12927,7 +12964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1223566349}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LeftDownThruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13032,7 +13069,7 @@ GameObject:
   - component: {fileID: 1286751437}
   - component: {fileID: 1286751439}
   - component: {fileID: 1286751438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13290,7 +13327,7 @@ GameObject:
   - component: {fileID: 1408843384}
   - component: {fileID: 1408843383}
   - component: {fileID: 1408843382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18019,7 +18056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1444628882}
   - component: {fileID: 1444628883}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18262,7 +18299,7 @@ GameObject:
   - component: {fileID: 1507172596}
   - component: {fileID: 1507172598}
   - component: {fileID: 1507172597}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wing_Right (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18580,7 +18617,7 @@ GameObject:
   - component: {fileID: 1536368452}
   - component: {fileID: 1536368454}
   - component: {fileID: 1536368453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Secondary_wing_Left (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18656,13 +18693,13 @@ GameObject:
   - component: {fileID: 1619258733}
   - component: {fileID: 1619258735}
   - component: {fileID: 1619258734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1619258733
 Transform:
   m_ObjectHideFlags: 0
@@ -23283,9 +23320,9 @@ GameObject:
   - component: {fileID: 1619950475}
   - component: {fileID: 1619950474}
   - component: {fileID: 1619950473}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spaceship
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23359,10 +23396,11 @@ MonoBehaviour:
   lasers:
   - {fileID: 1619258732}
   - {fileID: 1689932288}
-  beam: {fileID: 1128373051416584, guid: c4eec1ba1a07cac41904c87a9c939f7c, type: 2}
-  beamSpawner: {fileID: 760859456}
+  beam: {fileID: 114116937961451104, guid: a64f769612717734890f829c09ec0eaa, type: 2}
+  beamSpawner:
+  - {fileID: 760859456}
+  - {fileID: 509546628}
   crosshair: {fileID: 1021481936}
-  beamForce: 250
 --- !u!54 &1619950477
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23390,7 +23428,7 @@ GameObject:
   - component: {fileID: 1622759824}
   - component: {fileID: 1622759826}
   - component: {fileID: 1622759825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23606,13 +23644,13 @@ GameObject:
   - component: {fileID: 1689932289}
   - component: {fileID: 1689932291}
   - component: {fileID: 1689932290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LaserRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1689932289
 Transform:
   m_ObjectHideFlags: 0
@@ -28364,7 +28402,7 @@ GameObject:
   - component: {fileID: 1726811328}
   - component: {fileID: 1726811330}
   - component: {fileID: 1726811329}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Secondary_wing_Right (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28520,7 +28558,7 @@ GameObject:
   - component: {fileID: 1730993350}
   - component: {fileID: 1730993352}
   - component: {fileID: 1730993351}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon_Right (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28806,7 +28844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861146431}
   - component: {fileID: 1861146432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28940,7 +28978,7 @@ GameObject:
   - component: {fileID: 1863402634}
   - component: {fileID: 1863402636}
   - component: {fileID: 1863402635}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EngineParticles4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33564,7 +33602,7 @@ GameObject:
   - component: {fileID: 1961508497}
   - component: {fileID: 1961508499}
   - component: {fileID: 1961508498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShipBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33640,7 +33678,7 @@ GameObject:
   - component: {fileID: 1963861622}
   - component: {fileID: 1963861624}
   - component: {fileID: 1963861623}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thruster_End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33716,7 +33754,7 @@ GameObject:
   - component: {fileID: 2109491097}
   - component: {fileID: 2109491099}
   - component: {fileID: 2109491098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Engine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

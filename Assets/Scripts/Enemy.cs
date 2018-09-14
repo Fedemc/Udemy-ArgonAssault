@@ -34,9 +34,9 @@ public class Enemy : MonoBehaviour {
         blowInPiecesActivator = gameObject.GetComponent<BlowInPieces>();
     }
 
-    private void OnParticleCollision(GameObject other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(!enemyDead)
+        if (!enemyDead)
         {
             ProcessHit();
             if (maxHits <= 0)
